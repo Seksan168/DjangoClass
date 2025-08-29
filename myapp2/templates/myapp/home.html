@@ -1,6 +1,21 @@
-{% extends "myapp/base.html" %} {% block content %}
-<h1>Welcome to My Website</h1>
-<p>This is the home page.</p>
-<h3>Seksan Jeennamsai</h3
-{% endblock %}
+{% extends "myapp/base.html" %} {% block myheader %}
+<body class="bg-gray-100 text-gray-900">
+  <h1 class="text-3xl font-bold underline">
+    this is content from block myheader
+  </h1>
+</body>
+{% endblock myheader%} {% block content %}
+<center>
+  {% for data in pd%}
+  <h1>data title: {{data.title}}</h1>
+  <p>
+    {{data.description}}<br />
+    price: {{data.price}}<br />
+    quality: {{data.quality}}<br />
+    instock: {{data.instock}}<br />
+  </p>
+  <hr />
+  {% endfor %}
+</center>
 
+{% endblock content %}

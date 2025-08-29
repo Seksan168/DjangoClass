@@ -1,0 +1,14 @@
+{% extends "myapp/base.html" %} 
+{% load static %} 
+
+{% block myheader %} 
+
+{% endblock myheader %} 
+{% block content %}
+<script src="{% static 'js/myJs.js' %}"></script>
+<script>
+  myJs();
+</script>
+<h1 class="text-center text-2md font-bold underline">About us</h1>
+<h2 class="text-center text-sm">This is the about us page</h2>
+{% endblock content %}
